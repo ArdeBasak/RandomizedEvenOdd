@@ -28,8 +28,8 @@ func TestConsumeDataForSingleInput(t *testing.T) {
 	mock.AssertExpectations(t)
 }
 
-// TestConsumeDataForMultipleInput tests the ConsumeData function with multiple values.
-func TestConsumeDataForMultipleInput(t *testing.T) {
+// TestConsumeDataForMultipleInputs tests the ConsumeData function with multiple inputs.
+func TestConsumeDataForMultipleInputs(t *testing.T) {
 	// Create an instance of the mock
 	mock := &mocks.DataProvider{}
 
