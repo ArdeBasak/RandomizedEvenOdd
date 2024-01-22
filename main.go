@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	// Create an instance of the mock data provider
+	// Create an instance of the data provider
 	dataProvider := &service.DataProviderImpl{}
 
-	// Call ConsumeData with a single input
+	// Call ConsumeData
 	result, err := service.ConsumeData(dataProvider, 5)
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)

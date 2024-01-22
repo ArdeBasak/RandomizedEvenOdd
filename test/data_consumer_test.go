@@ -17,7 +17,7 @@ func TestConsumeDataForSingleInput(t *testing.T) {
 	// Set the expected return value for the GetRandomNumber method
 	mock.On("GetRandomNumber", 5).Return(3, nil).Once()
 
-	// Your code that uses the DataProvider interface
+	// Call ConsumeData that using the mocked DataProvider
 	result, err := service.ConsumeData(mock, 5)
 
 	// Assert that the result and error are as expected
@@ -41,7 +41,7 @@ func TestConsumeDataForMultipleInput(t *testing.T) {
 	// Set the expected return value for an error scenario
 	mock.On("GetRandomNumber", -1).Return(0, errors.New("Invalid id")).Once()
 
-	// Your code that uses the DataProvider interface
+	// Added multiple inputs for testing
 	testCases := []struct {
 		input int
 		want  string

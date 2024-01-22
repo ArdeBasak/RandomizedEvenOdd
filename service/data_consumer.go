@@ -1,9 +1,5 @@
 package service
 
-import (
-	"fmt"
-)
-
 // ConsumeData is a function that uses a DataProvider to fetch and process data.
 func ConsumeData(provider DataProvider, id int) (string, error) {
 	// Use GetRandomNumber to get a random number between 0 and id
@@ -11,8 +7,6 @@ func ConsumeData(provider DataProvider, id int) (string, error) {
 	if err != nil {
 		return "", err
 	}
-
-	fmt.Printf("randomNumber: %v\n", randomNumber)
 
 	// Check whether the value is even or odd
 	result := checkEvenOrOdd(randomNumber)
